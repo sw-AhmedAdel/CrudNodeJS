@@ -1,0 +1,846 @@
+{
+	"info": {
+		"_postman_id": "46117b90-691c-4066-b9f6-8124f5f0e1be",
+		"name": "AUTH",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23532256"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "CRUD",
+					"item": [
+						{
+							"name": "get users",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "localhost:8080/api/v1/users",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "search",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/v1/users/search",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"search"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "post user",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"type": "file",
+											"src": "yjE36UkEc/Bleachanime.png"
+										},
+										{
+											"key": "firstName",
+											"value": "leoooo",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "leo@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "middleName",
+											"value": "dddddddddd",
+											"type": "text"
+										},
+										{
+											"key": "thirdName",
+											"value": "sssssssss",
+											"type": "text"
+										},
+										{
+											"key": "ssn",
+											"value": "12345678912345",
+											"type": "text"
+										},
+										{
+											"key": "birthDate",
+											"value": "2023-06-29T00:00:00.000+00:00",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "sssssssssssssssssssssssssss",
+											"type": "text"
+										},
+										{
+											"key": "gender",
+											"value": "male",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:8080/api/v1/users",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update user",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\":\"sue\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/v1/users/64d2647061f5970f2e6d00b4",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"64d2647061f5970f2e6d00b4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get by id",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\":\"leo\",\r\n    \"email\":\"leo@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/v1/users/64d26bf36aa04a37bafee8de",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"64d26bf36aa04a37bafee8de"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update image",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"type": "file",
+											"src": "sIFAU1PJN/Bleachanime.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:8080/api/v1/users/uploadImage/64d26bf36aa04a37bafee8de",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"uploadImage",
+										"64d26bf36aa04a37bafee8de"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\":\"leo\",\r\n    \"email\":\"leo@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/v1/users/64d2647061f5970f2e6d00b4",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"64d2647061f5970f2e6d00b4"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "delete user",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/user",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create url",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"url\":\"/user/admin/id\",\n    \"method\":\"GET\",\n    \"roles\":{\n        \"manager\":400\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/role",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"role"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create url Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"path\": \"/users\",\n  \"role\": { \"manager\": 400 },\n  \"children\": [\n    {\n      \"path\": \"/update\",\n      \"role\": \"admin\",\n      \"children\": [\n        {\n          \"path\": \"/image\",\n          \"role\": \"user\",\n          \"children\": []\n        },\n        {\n          \"path\": \"/info\",\n          \"children\": []\n        }\n      ]\n    },\n    {\n      \"path\": \"/get\",\n      \"role\": \"admin\",\n      \"children\": []\n    },\n    {\n      \"path\": \"/delete\",\n      \"role\": \"admin\",\n      \"children\": []\n    },\n    {\n      \"path\": \"/profile\",\n      \"role\": { \"user\": 100, \"admin\": 200 },\n      \"children\": []\n    }\n  ]\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/create/urrschema",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"create",
+								"urrschema"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "test url",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/user/admin",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"if(pm.response.code === 201) {\r",
+									"    pm.environment.set('jwt', pm.response.json().token)\r",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \r\n   \"email\":\"sw.ahmed@gmail.com\",\r\n    \"password\":\"ahmed12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/users/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forgotpassword",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"if(pm.response.code === 201) {\r",
+									"    pm.environment.set('jwt', pm.response.json().token)\r",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \r\n\"email\":\"leo@gmail.com\"   \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/users/forgotpassword",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"users",
+								"forgotpassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reset password",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"if(pm.response.code === 200) {\r",
+									"    pm.environment.set('jwt', pm.response.json().token)\r",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \r\n   \"password\":\"ahmed123\",\r\n    \"passwordConfirm\":\"ahmed123\"\r\n   \r\n   \r\n   \r\n   \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/users/resetpassword/08823cd911dc90842770322f0083aa1bafd4a9501cf95c09209a636a3b9f716c",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"users",
+								"resetpassword",
+								"08823cd911dc90842770322f0083aa1bafd4a9501cf95c09209a636a3b9f716c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update password",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"if(pm.response.code === 200) {\r",
+									"    pm.environment.set('jwt', pm.response.json().token)\r",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"currentpassword\":\"ahmed12345\"\r\n   \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/users/updatepassword",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"users",
+								"updatepassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update me",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"name\":\"kaka kaka\"\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/users/updateme",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"users",
+								"updateme"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get one user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/users/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"users",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit one user",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/users/5",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"users",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete me",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/users/me",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"users",
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "my profile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/users/my/profile",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"users",
+								"my",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"if(pm.response.code === 200) {\r",
+									"    pm.environment.set('jwt', pm.response.json().token)\r",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \"email\":\"pm@gmail.com\",\n \"password\":\"1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/v1/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAssetCodes",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"if(pm.response.code === 200) {\r",
+									"    pm.environment.set('jwt', pm.response.json().token)\r",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZDM4NDc5NTJmZTZkZTFmNmZlYmZlNSIsInJvbGUiOiJBZG1pbiIsInBlcm1pc3Npb25zIjpbIm1hbmFnZTp1c2VyIiwibWFuYWdlOnByb2plY3QiLCJtYW5hZ2U6ZGVwYXJ0bWVudCJdLCJpYXQiOjE2OTE1OTIzNTksImV4cCI6MTY5MTY3ODc1OX0.w1n_bbsW9zp55I47EAEM3kCm0E7roFkh_fBA91eA6aM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/assets/getAccessCodes",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"assets",
+								"getAccessCodes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"if(pm.response.code === 201) {\r",
+									"    pm.environment.set('jwt', pm.response.json().token)\r",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"firstName\":\"Admin\",\r\n \"lastName\":\"Admin\",\r\n \"email\":\"Admin@gmail.com\",\r\n \"role\":\"Admin\",\r\n \"password\":\"1234\",\r\n \"permissions\":[\"manage:user\",\"manage:project\", \"manage:department\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/v1/auth/register",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/users/logout",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"users",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{jwt}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "localhost:3000/"
+		},
+		{
+			"key": "jwt",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZDI2OThiYmEwZDg1ZDEzYzlmZWViMSIsInJvbGUiOiJBZG1pbiIsInBlcm1pc3Npb25zIjpbImNyZWF0ZTp1c2VyIiwicmVhZDp1c2VyIiwic2VhcmNoOnVzZXIiLCJ1cGRhdGU6dXNlciJdLCJpYXQiOjE2OTE1NzAyNTksImV4cCI6MTY5MTY1NjY1OX0.ogtwXIZDCFbrRUw19ogq2o2YTAb_2fbZynIKYL86c1c"
+		}
+	]
+}

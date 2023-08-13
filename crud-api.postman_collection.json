@@ -1,0 +1,1030 @@
+{
+	"info": {
+		"_postman_id": "161fd438-07bf-4ab4-9d0a-67f94020b49d",
+		"name": "crud-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23532256"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "users list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZDI2OThiYmEwZDg1ZDEzYzlmZWViMSIsInJvbGUiOiJBZG1pbiIsInBlcm1pc3Npb25zIjpbImNyZWF0ZTp1c2VyIiwicmVhZDp1c2VyIiwic2VhcmNoOnVzZXIiLCJ1cGRhdGU6dXNlciJdLCJpYXQiOjE2OTE1OTIyNDQsImV4cCI6MTY5MTY3ODY0NH0.6v0jYiRM840fNcN5lUHkhHhlRH454zMi-BtqHRMX5Lk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/users/options",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"options"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "users options",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZDM3ZWIyNThhYzYyYjE1ZTNlZGMxOSIsInJvbGUiOiJQTSIsInBlcm1pc3Npb25zIjpbInJlYWQ6ZGVwYXJ0bWVudCIsInNlYXJjaDpkZXBhcnRtZW50IiwibWFuYWdlOnByb2plY3QiXSwiaWF0IjoxNjkxNTgyMTU3LCJleHAiOjE2OTE2Njg1NTd9.mdrvtytpeSX6a3bHfCeGcmhQsNRswlVz1VVRE1V3Ve8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/users/options",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"options"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user form tem",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/users/template/form?fields=email,ssn",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"template",
+								"form"
+							],
+							"query": [
+								{
+									"key": "fields",
+									"value": "email,ssn"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/mahmoud/Desktop/messi.jpeg"
+								},
+								{
+									"key": "firstName",
+									"value": "mahmoud",
+									"type": "text"
+								},
+								{
+									"key": "middleName",
+									"value": "ali",
+									"type": "text"
+								},
+								{
+									"key": "thirdName",
+									"value": "ali",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "test21@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "ssn",
+									"value": "12369874123695",
+									"type": "text"
+								},
+								{
+									"key": "birthDate",
+									"value": "Thu Jan 01 1970 02:00:02 GMT+0200 (Eastern European Standard Time)",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "nasir city , cairo , egypt",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "male",
+									"type": "text"
+								},
+								{
+									"key": "idImage",
+									"type": "file",
+									"src": "/home/mahmoud/Desktop/messi.jpeg",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/users/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "patch one user id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZDM3ZWIyNThhYzYyYjE1ZTNlZGMxOSIsInJvbGUiOiJQTSIsInBlcm1pc3Npb25zIjpbInJlYWQ6ZGVwYXJ0bWVudCIsInNlYXJjaDpkZXBhcnRtZW50IiwibWFuYWdlOnByb2plY3QiLCJvcHRpb25zOmRlcGFydG1lbnQiXSwiaWF0IjoxNjkxNTkyNjI0LCJleHAiOjE2OTE2NzkwMjR9.xMTjhpFEA4cubVYC9z8I0W_6BtSlDKNituKDEt8UYQ0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "firstName",
+									"value": "hussins",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/users/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "64c8fbbc094c5893a193266c"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "del user id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/mahmoud/Desktop/nymar.jpeg"
+								},
+								{
+									"key": "firstName",
+									"value": "mahmoud",
+									"type": "text"
+								},
+								{
+									"key": "middleName",
+									"value": "ali",
+									"type": "text"
+								},
+								{
+									"key": "thirdName",
+									"value": "ali",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "test2@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "ssn",
+									"value": "12369874123698",
+									"type": "text"
+								},
+								{
+									"key": "birthDate",
+									"value": "Thu Jan 01 1970 02:00:02 GMT+0200 (Eastern European Standard Time)",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "nasir city , cairo , egypt",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "male",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/users/:userId",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								":userId"
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "64ad49a3ab9a840b93faa643"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get use by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/mahmoud/Desktop/nymar.jpeg"
+								},
+								{
+									"key": "firstName",
+									"value": "mahmoud",
+									"type": "text"
+								},
+								{
+									"key": "middleName",
+									"value": "ali",
+									"type": "text"
+								},
+								{
+									"key": "thirdName",
+									"value": "ali",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "test2@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "ssn",
+									"value": "12369874123698",
+									"type": "text"
+								},
+								{
+									"key": "birthDate",
+									"value": "Thu Jan 01 1970 02:00:02 GMT+0200 (Eastern European Standard Time)",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "nasir city , cairo , egypt",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "male",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/users/:userId",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								":userId"
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "64aeccfd1d392d95012bfa37"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "patch user image",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZDI2OThiYmEwZDg1ZDEzYzlmZWViMSIsInJvbGUiOiJBZG1pbiIsInBlcm1pc3Npb25zIjpbImNyZWF0ZTp1c2VyIiwicmVhZDp1c2VyIiwic2VhcmNoOnVzZXIiLCJ1cGRhdGU6dXNlciJdLCJpYXQiOjE2OTE1OTIyNDQsImV4cCI6MTY5MTY3ODY0NH0.6v0jYiRM840fNcN5lUHkhHhlRH454zMi-BtqHRMX5Lk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/hussein/Desktop/images.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/users/img-upload/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"img-upload",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create new post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/mahmoud/Desktop/images.jpeg"
+								},
+								{
+									"key": "title",
+									"value": "i love cr7",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/posts",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all posts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/posts/comments",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"posts",
+								"comments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZDM1MzQxOTlhYWYxYzkwNmUxMGJjNSIsInJvbGUiOiJNYW5hZ2VyIiwicGVybWlzc2lvbnMiOlsibWFuYWdlOnVzZXIiLCJzZWFyY2g6dXNlciIsInJlYWRJRDp1c2VyIl0sImlhdCI6MTY5MTU3ODY4NSwiZXhwIjoxNjkxNjY1MDg1fQ.YTd0Rq_V0cBHvXzAItmALTqBLnvcI5GxGFlyH-nvkwY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZDBjZjE3MjliN2QwMjUxY2YwYmQzMCIsInJvbGUiOiJBZG1pbiIsInBlcm1pc3Npb24iOltdLCJpYXQiOjE2OTE0MjUyMTgsImV4cCI6MTY5MTUxMTYxOH0.Kr4h7P99FxhRuUVLX814V0TFxUWWsP7Hg71n4olZJDk",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "gender",
+									"value": "female",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/users/search?p=2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"search"
+							],
+							"query": [
+								{
+									"key": "gender",
+									"value": "male",
+									"disabled": true
+								},
+								{
+									"key": "p",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "departments",
+			"item": [
+				{
+					"name": "department list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZDM3ZWIyNThhYzYyYjE1ZTNlZGMxOSIsInJvbGUiOiJQTSIsInBlcm1pc3Npb25zIjpbInJlYWQ6ZGVwYXJ0bWVudCIsInNlYXJjaDpkZXBhcnRtZW50IiwibWFuYWdlOnByb2plY3QiXSwiaWF0IjoxNjkxNTgyMTU3LCJleHAiOjE2OTE2Njg1NTd9.mdrvtytpeSX6a3bHfCeGcmhQsNRswlVz1VVRE1V3Ve8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/departments/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"departments",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add department",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZDM3ZWIyNThhYzYyYjE1ZTNlZGMxOSIsInJvbGUiOiJQTSIsInBlcm1pc3Npb25zIjpbInJlYWQ6ZGVwYXJ0bWVudCIsInNlYXJjaDpkZXBhcnRtZW50IiwibWFuYWdlOnByb2plY3QiXSwiaWF0IjoxNjkxNTgyMTU3LCJleHAiOjE2OTE2Njg1NTd9.mdrvtytpeSX6a3bHfCeGcmhQsNRswlVz1VVRE1V3Ve8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"departmentName\":\"hr\",\n    \"managerName\":\"marawn\",\n    \"employeesNumber\":3\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/departments/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"departments",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update department",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZDM3ZWIyNThhYzYyYjE1ZTNlZGMxOSIsInJvbGUiOiJQTSIsInBlcm1pc3Npb25zIjpbInJlYWQ6ZGVwYXJ0bWVudCIsInNlYXJjaDpkZXBhcnRtZW50IiwibWFuYWdlOnByb2plY3QiXSwiaWF0IjoxNjkxNTgyMTU3LCJleHAiOjE2OTE2Njg1NTd9.mdrvtytpeSX6a3bHfCeGcmhQsNRswlVz1VVRE1V3Ve8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"employeesNumber\":5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/departments/64d226c53ff9cbbc522632f9",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"departments",
+								"64d226c53ff9cbbc522632f9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete department",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZDM3ZWIyNThhYzYyYjE1ZTNlZGMxOSIsInJvbGUiOiJQTSIsInBlcm1pc3Npb25zIjpbInJlYWQ6ZGVwYXJ0bWVudCIsInNlYXJjaDpkZXBhcnRtZW50IiwibWFuYWdlOnByb2plY3QiXSwiaWF0IjoxNjkxNTgyMTU3LCJleHAiOjE2OTE2Njg1NTd9.mdrvtytpeSX6a3bHfCeGcmhQsNRswlVz1VVRE1V3Ve8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/departments/64d226c53ff9cbbc522632f9",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"departments",
+								"64d226c53ff9cbbc522632f9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get department by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZDM3ZWIyNThhYzYyYjE1ZTNlZGMxOSIsInJvbGUiOiJQTSIsInBlcm1pc3Npb25zIjpbInJlYWQ6ZGVwYXJ0bWVudCIsInNlYXJjaDpkZXBhcnRtZW50IiwibWFuYWdlOnByb2plY3QiXSwiaWF0IjoxNjkxNTgyMTU3LCJleHAiOjE2OTE2Njg1NTd9.mdrvtytpeSX6a3bHfCeGcmhQsNRswlVz1VVRE1V3Ve8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/departments/64d22ac3912b220674942aba",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"departments",
+								"64d22ac3912b220674942aba"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZDM3ZWIyNThhYzYyYjE1ZTNlZGMxOSIsInJvbGUiOiJQTSIsInBlcm1pc3Npb25zIjpbInJlYWQ6ZGVwYXJ0bWVudCIsInNlYXJjaDpkZXBhcnRtZW50IiwibWFuYWdlOnByb2plY3QiXSwiaWF0IjoxNjkxNTgyMTU3LCJleHAiOjE2OTE2Njg1NTd9.mdrvtytpeSX6a3bHfCeGcmhQsNRswlVz1VVRE1V3Ve8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "departmentName",
+									"value": "hr",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/departments/search",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"departments",
+								"search"
+							],
+							"query": [
+								{
+									"key": "departmentName",
+									"value": "hr",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "projects",
+			"item": [
+				{
+					"name": "project list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZDM3ZWIyNThhYzYyYjE1ZTNlZGMxOSIsInJvbGUiOiJQTSIsInBlcm1pc3Npb25zIjpbInJlYWQ6ZGVwYXJ0bWVudCIsInNlYXJjaDpkZXBhcnRtZW50IiwibWFuYWdlOnByb2plY3QiLCJvcHRpb25zOmRlcGFydG1lbnQiXSwiaWF0IjoxNjkxNTkyNjI0LCJleHAiOjE2OTE2NzkwMjR9.xMTjhpFEA4cubVYC9z8I0W_6BtSlDKNituKDEt8UYQ0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/projects/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"projects",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add project",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZDM3ZWIyNThhYzYyYjE1ZTNlZGMxOSIsInJvbGUiOiJQTSIsInBlcm1pc3Npb25zIjpbInJlYWQ6ZGVwYXJ0bWVudCIsInNlYXJjaDpkZXBhcnRtZW50IiwibWFuYWdlOnByb2plY3QiXSwiaWF0IjoxNjkxNTgyMTU3LCJleHAiOjE2OTE2Njg1NTd9.mdrvtytpeSX6a3bHfCeGcmhQsNRswlVz1VVRE1V3Ve8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "projectName",
+									"value": "auth",
+									"type": "text"
+								},
+								{
+									"key": "projectManagerName",
+									"value": "aref",
+									"type": "text"
+								},
+								{
+									"key": "employeesNumber",
+									"value": "5",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/projects/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"projects",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update project",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZDM3ZWIyNThhYzYyYjE1ZTNlZGMxOSIsInJvbGUiOiJQTSIsInBlcm1pc3Npb25zIjpbInJlYWQ6ZGVwYXJ0bWVudCIsInNlYXJjaDpkZXBhcnRtZW50IiwibWFuYWdlOnByb2plY3QiXSwiaWF0IjoxNjkxNTgyMTU3LCJleHAiOjE2OTE2Njg1NTd9.mdrvtytpeSX6a3bHfCeGcmhQsNRswlVz1VVRE1V3Ve8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "employeesNumber",
+									"value": "6",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/projects/64d22c2915db717d64c21479",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"projects",
+								"64d22c2915db717d64c21479"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete project",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZDM3ZWIyNThhYzYyYjE1ZTNlZGMxOSIsInJvbGUiOiJQTSIsInBlcm1pc3Npb25zIjpbInJlYWQ6ZGVwYXJ0bWVudCIsInNlYXJjaDpkZXBhcnRtZW50IiwibWFuYWdlOnByb2plY3QiXSwiaWF0IjoxNjkxNTgyMTU3LCJleHAiOjE2OTE2Njg1NTd9.mdrvtytpeSX6a3bHfCeGcmhQsNRswlVz1VVRE1V3Ve8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/projects/64d22c2915db717d64c21479",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"projects",
+								"64d22c2915db717d64c21479"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get project by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZDM3ZWIyNThhYzYyYjE1ZTNlZGMxOSIsInJvbGUiOiJQTSIsInBlcm1pc3Npb25zIjpbInJlYWQ6ZGVwYXJ0bWVudCIsInNlYXJjaDpkZXBhcnRtZW50IiwibWFuYWdlOnByb2plY3QiXSwiaWF0IjoxNjkxNTgyMTU3LCJleHAiOjE2OTE2Njg1NTd9.mdrvtytpeSX6a3bHfCeGcmhQsNRswlVz1VVRE1V3Ve8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/projects/64d22c2915db717d64c21479",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"projects",
+								"64d22c2915db717d64c21479"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZDM3ZWIyNThhYzYyYjE1ZTNlZGMxOSIsInJvbGUiOiJQTSIsInBlcm1pc3Npb25zIjpbInJlYWQ6ZGVwYXJ0bWVudCIsInNlYXJjaDpkZXBhcnRtZW50IiwibWFuYWdlOnByb2plY3QiXSwiaWF0IjoxNjkxNTgyMTU3LCJleHAiOjE2OTE2Njg1NTd9.mdrvtytpeSX6a3bHfCeGcmhQsNRswlVz1VVRE1V3Ve8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "projectName",
+									"value": "auth",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/projects/search",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"projects",
+								"search"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZDIzYzBjMmUyMTk3Yzg2N2YxYWE4OSIsInJvbGUiOiJwcm9qZWN0TWFuYWdlciIsInBlcm1pc3Npb24iOltdLCJpYXQiOjE2OTE0OTk3NDQsImV4cCI6MTY5MTU4NjE0NH0.Y1d0wdj5wvgZVhU_hfKrq0dUL4DHUodKLWZHPmuGPAM",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

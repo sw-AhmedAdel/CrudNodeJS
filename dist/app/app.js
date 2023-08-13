@@ -1,0 +1,33 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = __importDefault(require("express"));
+const cors_1 = __importDefault(require("cors"));
+const path_1 = __importDefault(require("path"));
+const express_mongo_sanitize_1 = __importDefault(require("express-mongo-sanitize"));
+const user_routes_1 = __importDefault(require("./routes/user.routes"));
+const post_routes_1 = __importDefault(require("./routes/post.routes"));
+const asset_routes_1 = __importDefault(require("./routes/asset.routes"));
+const department_routes_1 = __importDefault(require("./routes/department.routes"));
+const project_routes_1 = __importDefault(require("./routes/project.routes"));
+const not_found_mw_1 = __importDefault(require("./middlewares/not-found.mw"));
+const error_mw_1 = __importDefault(require("./middlewares/error.mw"));
+const verify_user_mw_1 = require("./middlewares/verify-user.mw");
+const app = (0, express_1.default)();
+app.use(express_1.default.urlencoded({ extended: true }));
+app.use(express_1.default.json());
+app.use((0, cors_1.default)());
+app.use((0, express_mongo_sanitize_1.default)());
+app.use(verify_user_mw_1.verifyUserMW);
+app.use("/uploads", express_1.default.static(path_1.default.join(__dirname, "../", "uploads")));
+app.use("/api/v1/users", user_routes_1.default);
+app.use("/api/v1/posts", post_routes_1.default);
+app.use("/api/v1/assets", asset_routes_1.default);
+app.use("/api/v1/departments", department_routes_1.default);
+app.use("/api/v1/projects", project_routes_1.default);
+app.use(not_found_mw_1.default);
+app.use(error_mw_1.default);
+exports.default = app;
+//# sourceMappingURL=app.js.map

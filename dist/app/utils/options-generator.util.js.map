@@ -1,0 +1,1 @@
+{"version":3,"file":"options-generator.util.js","sourceRoot":"","sources":["../../../src/app/utils/options-generator.util.ts"],"names":[],"mappings":";;AAAA,kBAAe,CACb,KAAa,EACb,OAQC,EACD,EAAE;IACF,MAAM,YAAY,GAAG;QACnB,KAAK;QACL,OAAO,EAAE,OAAO;QAChB,WAAW,EAAE,MAAM;QACnB,QAAQ,EAAE,IAAI;QACd,GAAG,OAAO;QACV,UAAU,EAAE,OAAO,CAAC,UAAU;KAC/B,CAAC;IACF,OAAO,YAAY,CAAC;AACtB,CAAC,CAAC"}

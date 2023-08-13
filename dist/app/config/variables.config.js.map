@@ -1,0 +1,1 @@
+{"version":3,"file":"variables.config.js","sourceRoot":"","sources":["../../../src/app/config/variables.config.ts"],"names":[],"mappings":";;AAAA,MAAM,EAAE,IAAI,EAAE,MAAM,EAAE,QAAQ,EAAE,GAAG,OAAO,CAAC,GAAG,CAAC;AAC/C,kBAAe;IACb,IAAI,EAAE,IAAI,IAAI,IAAI;IAClB,MAAM,EAAE,MAAM,IAAI,kCAAkC;IACpD,WAAW,EAAE,YAAY;IACzB,QAAQ,EAAE,QAAQ,IAAI,KAAK;CAC5B,CAAC"}

@@ -1,0 +1,30 @@
+import express, { request } from "express";
+import cors from "cors";
+import path from "path";
+import mongoSanitize from "express-mongo-sanitize";
+import userRoutes from "./routes/user.routes";
+import postRoutes from "./routes/post.routes";
+import assetRouter from "./routes/asset.routes";
+import departmentRouter from "./routes/department.routes";
+import projectRouter from "./routes/project.routes";
+import notFoundMw from "./middlewares/not-found.mw";
+import errorMw from "./middlewares/error.mw";
+import roleAuthMw from "./middlewares/role-auth.mw";
+import { verifyUserMW } from "./middlewares/verify-user.mw";
+
+const app = express();
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(cors());
+app.use(mongoSanitize());
+app.use(verifyUserMW);
+app.use("/uploads", express.static(path.join(__dirname, "../", "uploads")));
+app.use("/api/v1/users", userRoutes);
+app.use("/api/v1/posts", postRoutes);
+app.use("/api/v1/assets", assetRouter);
+app.use("/api/v1/departments", departmentRouter);
+app.use("/api/v1/projects", projectRouter);
+app.use(notFoundMw);
+app.use(errorMw);
+
+export default app;

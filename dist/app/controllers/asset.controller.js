@@ -18,10 +18,21 @@ async function addToAsset(req, res) {
 exports.addToAsset = addToAsset;
 async function getAssetMenu(req, res) {
     try {
+        const cards = [];
+        const assetsCodes = [];
+        req.user.permissions.forEach((permission) => {
+            const [action, subject] = permission.split(":");
+            if (!cards.includes(subject)) {
+                cards.push(subject);
+            }
+            assetsCodes.push(`${action}:${subject}`);
+        });
         const assets = {
-            assetsCodes: req.user.permissions,
+            assetsCodes,
+            cards,
+            //assetsCodes2: req.user.permissions,
         };
-        (0, response_util_1.default)(req, res, "OK", "", assets);
+        return (0, response_util_1.default)(req, res, "OK", "", assets);
     }
     catch (error) {
         return (0, response_util_1.default)(req, res, "INTERNAL_SER_ERR", error.message);

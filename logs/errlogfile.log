@@ -12,3 +12,18 @@
 8/13/2023, 3:37:14 PM |  ERROR | http | POST| 500 | body :  {"departmentName":"hr","managerName":"marawn","employeesNumber":3} |/api/v1/departments/ |E11000 duplicate key error collection: Fixed-authDB.departments index: departmentName_1 dup key: { departmentName: "hr" } | 
 8/13/2023, 3:37:22 PM |  ERROR | http | POST| 500 | body :  {"departmentName":"acc","managerName":"marawn","employeesNumber":3} |/api/v1/departments/ |Cannot set headers after they are sent to the client | 
 8/13/2023, 3:37:58 PM |  ERROR | http | POST| 500 | body :  {"projectName":"auth","projectManagerName":"aref","employeesNumber":"5"} |/api/v1/projects/ |Cannot set headers after they are sent to the client | 
+8/14/2023, 8:11:41 PM |  ERROR | http | GET| 500 | body :  {} |/api/v1/assets/getAccessCodes |jwt malformed | 
+8/14/2023, 8:11:44 PM |  ERROR | http | GET| 500 | body :  {} |/api/v1/assets/getAccessCodes |jwt malformed | 
+8/14/2023, 8:11:45 PM |  ERROR | http | GET| 500 | body :  {} |/api/v1/assets/getAccessCodes |jwt malformed | 
+8/14/2023, 8:11:52 PM |  ERROR | http | GET| 500 | body :  {} |/api/v1/assets/getAccessCodes |jwt malformed | 
+8/14/2023, 8:11:53 PM |  ERROR | http | GET| 500 | body :  {} |/api/v1/assets/getAccessCodes |jwt malformed | 
+8/14/2023, 8:12:08 PM |  ERROR | http | GET| 500 | body :  {} |/api/v1/assets/getAccessCodes |jwt malformed | 
+8/14/2023, 8:12:22 PM |  ERROR | http | GET| 500 | body :  {} |/api/v1/assets/getAccessCodes |jwt malformed | 
+8/14/2023, 8:12:27 PM |  ERROR | http | GET| 500 | body :  {} |/api/v1/users |jwt malformed | 
+8/14/2023, 8:12:28 PM |  ERROR | http | GET| 500 | body :  {} |/api/v1/users |jwt malformed | 
+8/14/2023, 8:13:45 PM |  ERROR | http | GET| 500 | body :  {} |/api/v1/assets/getAccessCodes |jwt malformed | 
+8/14/2023, 8:13:46 PM |  ERROR | http | GET| 500 | body :  {} |/api/v1/assets/getAccessCodes |jwt malformed | 
+8/14/2023, 8:14:13 PM |  ERROR | http | GET| 500 | body :  {} |/api/v1/assets/getAccessCodes |jwt malformed | 
+8/14/2023, 8:14:13 PM |  ERROR | http | GET| 500 | body :  {} |/api/v1/assets/getAccessCodes |jwt malformed | 
+8/14/2023, 8:14:20 PM |  ERROR | http | GET| 500 | body :  {} |/api/v1/assets/getAccessCodes |jwt malformed | 
+8/14/2023, 8:14:38 PM |  ERROR | http | GET| 500 | body :  {} |/api/v1/assets/getAccessCodes |jwt malformed | 

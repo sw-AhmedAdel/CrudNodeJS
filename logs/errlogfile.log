@@ -27,3 +27,4 @@
 8/14/2023, 8:14:13 PM |  ERROR | http | GET| 500 | body :  {} |/api/v1/assets/getAccessCodes |jwt malformed | 
 8/14/2023, 8:14:20 PM |  ERROR | http | GET| 500 | body :  {} |/api/v1/assets/getAccessCodes |jwt malformed | 
 8/14/2023, 8:14:38 PM |  ERROR | http | GET| 500 | body :  {} |/api/v1/assets/getAccessCodes |jwt malformed | 
+8/21/2023, 7:54:32 AM |  ERROR | http | POST| 500 | body :  {"firstName":"mahmoud","middleName":"ali","thirdName":"ali","email":"test21@gmail.com","ssn":"12369874123695","birthDate":"Thu Jan 01 1970 02:00:02 GMT+0200 (Eastern European Standard Time)","address":"nasir city , cairo , egypt","gender":"male"} |/api/v1/users/ |Cannot read properties of undefined (reading 'path') | 

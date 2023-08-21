@@ -31,19 +31,33 @@ function hasPermission(
   //"update:user:firstName:lastName", "read:user"
   //"update:project:name
   const getAbility = ability.rules.find(
-    (rule: any) => rule.action === action && rule.subject === subject
+    (rule: any) => (rule.action === action && rule.subject === subject) || (rule.action === 'manage' && rule.subject === subject)
   );
+
+  console.log("ability.rules",ability.rules);
+  console.log("getAbility",getAbility);
+
 
   // manage: subject
   if (!getAbility) {
+    console.log("ability.can(action, subject)",ability.can(action, subject));
+    // console.log("getAbility1",getAbility);
+
     return ability.can(action, subject);
-  } else if (!getAbility.fields) {
+  } else if (!getAbility.fields ) {
+    
     // can (update , user , [firstName , lastName]) compare [firstName , lastName] with req.body
+    console.log("getAbility2",getAbility);
+
+
     return ability.can(action, subject);
   } else {
     // can (update , user , [firstName , lastName]) compare [firstName , lastName] with req.body
+    // console.log("getAbility3",getAbility);
+
     return fields.every((field) => ability.can(action, subject, field));
   }
+
 }
 
 export default (action: string, subject: string) => {
@@ -53,6 +67,7 @@ export default (action: string, subject: string) => {
       const fields = Object.keys(req.body);
 
       const ability = await buildUserAbilities(permissions);
+      
       const hasAbility = hasPermission(ability, action, subject, fields);
 
       if (!hasAbility) {

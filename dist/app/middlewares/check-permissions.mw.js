@@ -23,17 +23,23 @@ function hasPermission(ability, action, subject, fields) {
     // find what abilit he has in the end point that he wants to access like the below
     //"update:user:firstName:lastName", "read:user"
     //"update:project:name
-    const getAbility = ability.rules.find((rule) => rule.action === action && rule.subject === subject);
+    const getAbility = ability.rules.find((rule) => (rule.action === action && rule.subject === subject) || (rule.action === 'manage' && rule.subject === subject));
+    console.log("ability.rules", ability.rules);
+    console.log("getAbility", getAbility);
     // manage: subject
     if (!getAbility) {
+        console.log("ability.can(action, subject)", ability.can(action, subject));
+        // console.log("getAbility1",getAbility);
         return ability.can(action, subject);
     }
     else if (!getAbility.fields) {
         // can (update , user , [firstName , lastName]) compare [firstName , lastName] with req.body
+        console.log("getAbility2", getAbility);
         return ability.can(action, subject);
     }
     else {
         // can (update , user , [firstName , lastName]) compare [firstName , lastName] with req.body
+        // console.log("getAbility3",getAbility);
         return fields.every((field) => ability.can(action, subject, field));
     }
 }
